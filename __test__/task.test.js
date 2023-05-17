@@ -62,19 +62,19 @@ describe('TASK API', () => {
     });
   });
 
-  describe('DELETE /tasks/:id', () => {
-    it('should delete a TASK item', async () => {
-      const res = await request(app).delete(`/api/tasks/${response.body._id}`);
-      expect(res.status).toBe(204);
-      expect(res.body).toEqual({});
-    });
-  });
-
   describe('Mark task as completed /tasks/:id/completed', () => {
     it('should update task status as completed', async () => {
       const res = await request(app).patch(`/api/tasks/${response.body._id}/completed`).send({});
       expect(res.status).toBe(200);
       expect(res.body.status).toEqual("completed");
+    });
+  });
+
+  describe('DELETE /tasks/:id', () => {
+    it('should delete a TASK item', async () => {
+      const res = await request(app).delete(`/api/tasks/${response.body._id}`);
+      expect(res.status).toBe(204);
+      expect(res.body).toEqual({});
     });
   });
 });
