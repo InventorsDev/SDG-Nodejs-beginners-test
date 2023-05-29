@@ -1,3 +1,7 @@
+# My Information
+### Name: Osunronbi Okikiola
+### Email: osunronbiolanlesi@gmail.com
+
 # Task: ExpressJS Task API
 This project is a simple ExpressJS task API that allows users to create, retrieve, update, and delete tasks. The API is built using ExpressJS and MongoDB for data storage.
 
